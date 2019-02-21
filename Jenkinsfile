@@ -30,16 +30,5 @@ pipeline {
         }
       }
     }
-    stage('Test') {
-      when {
-        branch 'master'
-      }
-      steps {
-        container('go') {
-          sleep 10
-          sh 'make test'
-        }
-      }
-    }
   }
 }
