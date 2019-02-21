@@ -36,6 +36,7 @@ pipeline {
       }
       steps {
         container('go') {
+          sleep 10
           sh 'make test'
         }
       }
